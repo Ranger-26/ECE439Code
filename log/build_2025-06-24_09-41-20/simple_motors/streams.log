@@ -1,0 +1,37 @@
+[14.230s] Invoking command in '/home/pi/ros2_ws/build/simple_motors': PYTHONPATH=/home/pi/ros2_ws/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/simple_motors/build --no-deps symlink_data --force
+[16.117s] /usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[16.117s]   warnings.warn(msg)
+[18.603s] running develop
+[18.609s] /usr/local/lib/python3.11/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[18.609s] !!
+[18.610s] 
+[18.610s]         ********************************************************************************
+[18.610s]         Please avoid running ``setup.py`` and ``easy_install``.
+[18.611s]         Instead, use pypa/build, pypa/installer or other
+[18.611s]         standards-based tools.
+[18.611s] 
+[18.628s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[18.629s]         ********************************************************************************
+[18.629s] 
+[18.630s] !!
+[18.630s]   easy_install.initialize_options(self)
+[21.552s] running egg_info
+[21.912s] writing simple_motors.egg-info/PKG-INFO
+[21.914s] writing dependency_links to simple_motors.egg-info/dependency_links.txt
+[21.916s] writing entry points to simple_motors.egg-info/entry_points.txt
+[21.918s] writing requirements to simple_motors.egg-info/requires.txt
+[21.919s] writing top-level names to simple_motors.egg-info/top_level.txt
+[22.358s] reading manifest file 'simple_motors.egg-info/SOURCES.txt'
+[22.364s] writing manifest file 'simple_motors.egg-info/SOURCES.txt'
+[22.606s] running build_ext
+[22.607s] Creating /home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages/simple-motors.egg-link (link to .)
+[22.609s] Installing motor_commander_left script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+[22.611s] Installing motor_commander_right script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+[22.611s] Installing motor_executor_left script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+[22.612s] Installing motor_executor_right script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+[22.613s] 
+[22.613s] Installed /home/pi/ros2_ws/build/simple_motors
+[22.614s] running symlink_data
+[22.615s] symbolically linking /home/pi/ros2_ws/build/simple_motors/resource/simple_motors -> /home/pi/ros2_ws/install/simple_motors/share/ament_index/resource_index/packages
+[22.616s] symbolically linking /home/pi/ros2_ws/build/simple_motors/package.xml -> /home/pi/ros2_ws/install/simple_motors/share/simple_motors
+[22.945s] Invoked command in '/home/pi/ros2_ws/build/simple_motors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/simple_motors/build --no-deps symlink_data --force

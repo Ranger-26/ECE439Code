@@ -1,0 +1,34 @@
+[17.138s] Invoking command in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/basic_motors_and_sensors build --build-base /home/pi/ros2_ws/build/basic_motors_and_sensors/build install --record /home/pi/ros2_ws/build/basic_motors_and_sensors/install.log --single-version-externally-managed install_data
+[19.255s] /usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[19.255s]   warnings.warn(msg)
+[21.094s] running egg_info
+[21.347s] writing ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/PKG-INFO
+[21.350s] writing dependency_links to ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/dependency_links.txt
+[21.353s] writing entry points to ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/entry_points.txt
+[21.355s] writing requirements to ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/requires.txt
+[21.363s] writing top-level names to ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/top_level.txt
+[21.881s] reading manifest file '../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/SOURCES.txt'
+[21.884s] adding license file 'LICENSE'
+[21.888s] writing manifest file '../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/SOURCES.txt'
+[21.889s] running build
+[21.890s] running build_py
+[21.894s] copying basic_motors_and_sensors/motor_executor.py -> /home/pi/ros2_ws/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+[21.895s] copying basic_motors_and_sensors/sensors_processor.py -> /home/pi/ros2_ws/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+[21.895s] copying basic_motors_and_sensors/encoders_node.py -> /home/pi/ros2_ws/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+[21.896s] copying basic_motors_and_sensors/sensors_to_motor_command_node.py -> /home/pi/ros2_ws/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+[21.899s] running install
+[21.935s] running install_lib
+[22.198s] copying /home/pi/ros2_ws/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/motor_executor.py -> /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+[22.211s] byte-compiling /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/motor_executor.py to motor_executor.cpython-311.pyc
+[22.215s] running install_data
+[22.217s] running install_egg_info
+[22.561s] removing '/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors-0.0.0-py3.11.egg-info' (and everything under it)
+[22.566s] Copying ../../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors-0.0.0-py3.11.egg-info
+[22.580s] running install_scripts
+[25.025s] Installing encoders_node script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[25.026s] Installing motor_commander script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[25.028s] Installing motor_executor script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[25.029s] Installing sensors_node script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[25.031s] Installing sensors_processor script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[25.036s] writing list of installed files to '/home/pi/ros2_ws/build/basic_motors_and_sensors/install.log'
+[25.254s] Invoked command in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/basic_motors_and_sensors build --build-base /home/pi/ros2_ws/build/basic_motors_and_sensors/build install --record /home/pi/ros2_ws/build/basic_motors_and_sensors/install.log --single-version-externally-managed install_data

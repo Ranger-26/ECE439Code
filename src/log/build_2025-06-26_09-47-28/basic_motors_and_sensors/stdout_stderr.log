@@ -1,0 +1,69 @@
+/usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+creating ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info
+writing ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/PKG-INFO
+writing dependency_links to ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/dependency_links.txt
+writing entry points to ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/entry_points.txt
+writing requirements to ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/requires.txt
+writing top-level names to ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/top_level.txt
+writing manifest file '../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/SOURCES.txt'
+reading manifest file '../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build
+creating /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib
+creating /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/raw_sensors_debug.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/motor_commander.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/motor_demo.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/plot_demo.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/run_motors.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/motor_executor.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/sensors_processor.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/__init__.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/sensors_node.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/encoders_node.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+copying basic_motors_and_sensors/sensors_to_motor_command_node.py -> /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors
+running install
+running install_lib
+creating /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/raw_sensors_debug.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/motor_commander.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/motor_demo.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/plot_demo.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/run_motors.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/motor_executor.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/sensors_processor.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/__init__.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/sensors_node.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/encoders_node.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+copying /home/pi/ros2_ws/src/build/basic_motors_and_sensors/build/lib/basic_motors_and_sensors/sensors_to_motor_command_node.py -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/raw_sensors_debug.py to raw_sensors_debug.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/motor_commander.py to motor_commander.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/motor_demo.py to motor_demo.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/plot_demo.py to plot_demo.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/run_motors.py to run_motors.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/motor_executor.py to motor_executor.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/sensors_processor.py to sensors_processor.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/__init__.py to __init__.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/sensors_node.py to sensors_node.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/encoders_node.py to encoders_node.cpython-311.pyc
+byte-compiling /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors/sensors_to_motor_command_node.py to sensors_to_motor_command_node.cpython-311.pyc
+running install_data
+creating /home/pi/ros2_ws/src/install/basic_motors_and_sensors/share/ament_index
+creating /home/pi/ros2_ws/src/install/basic_motors_and_sensors/share/ament_index/resource_index
+creating /home/pi/ros2_ws/src/install/basic_motors_and_sensors/share/ament_index/resource_index/packages
+copying resource/basic_motors_and_sensors -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/share/ament_index/resource_index/packages
+copying package.xml -> /home/pi/ros2_ws/src/install/basic_motors_and_sensors/share/basic_motors_and_sensors
+running install_egg_info
+Copying ../../build/basic_motors_and_sensors/basic_motors_and_sensors.egg-info to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic_motors_and_sensors-0.0.0-py3.11.egg-info
+running install_scripts
+Installing encoders_node script to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+Installing motor_commander script to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+Installing motor_executor script to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+Installing sensors_node script to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+Installing sensors_processor script to /home/pi/ros2_ws/src/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+writing list of installed files to '/home/pi/ros2_ws/src/build/basic_motors_and_sensors/install.log'

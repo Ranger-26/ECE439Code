@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing simple_motors.egg-info/PKG-INFO
+writing dependency_links to simple_motors.egg-info/dependency_links.txt
+writing entry points to simple_motors.egg-info/entry_points.txt
+writing requirements to simple_motors.egg-info/requires.txt
+writing top-level names to simple_motors.egg-info/top_level.txt
+reading manifest file 'simple_motors.egg-info/SOURCES.txt'
+writing manifest file 'simple_motors.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages/simple-motors.egg-link (link to .)
+Installing motor_commander_left script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+Installing motor_commander_right script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+Installing motor_executor_left script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+Installing motor_executor_right script to /home/pi/ros2_ws/install/simple_motors/lib/simple_motors
+
+Installed /home/pi/ros2_ws/build/simple_motors
+running symlink_data
+symbolically linking /home/pi/ros2_ws/build/simple_motors/resource/simple_motors -> /home/pi/ros2_ws/install/simple_motors/share/ament_index/resource_index/packages
+symbolically linking /home/pi/ros2_ws/build/simple_motors/package.xml -> /home/pi/ros2_ws/install/simple_motors/share/simple_motors

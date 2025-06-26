@@ -1,0 +1,24 @@
+[16.827s] Invoking command in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors': PYTHONPATH=/home/pi/ros2_ws/build/i2c_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/i2c_sensors build --build-base /home/pi/ros2_ws/build/i2c_sensors/build install --record /home/pi/ros2_ws/build/i2c_sensors/install.log --single-version-externally-managed install_data
+[19.046s] /usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[19.047s]   warnings.warn(msg)
+[20.841s] running egg_info
+[21.096s] writing ../../../build/i2c_sensors/i2c_sensors.egg-info/PKG-INFO
+[21.097s] writing dependency_links to ../../../build/i2c_sensors/i2c_sensors.egg-info/dependency_links.txt
+[21.099s] writing entry points to ../../../build/i2c_sensors/i2c_sensors.egg-info/entry_points.txt
+[21.100s] writing requirements to ../../../build/i2c_sensors/i2c_sensors.egg-info/requires.txt
+[21.100s] writing top-level names to ../../../build/i2c_sensors/i2c_sensors.egg-info/top_level.txt
+[21.630s] reading manifest file '../../../build/i2c_sensors/i2c_sensors.egg-info/SOURCES.txt'
+[21.631s] adding license file 'LICENSE'
+[21.635s] writing manifest file '../../../build/i2c_sensors/i2c_sensors.egg-info/SOURCES.txt'
+[21.636s] running build
+[21.636s] running build_py
+[21.638s] running install
+[21.670s] running install_lib
+[21.932s] running install_data
+[21.934s] running install_egg_info
+[22.205s] removing '/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages/i2c_sensors-0.0.0-py3.11.egg-info' (and everything under it)
+[22.207s] Copying ../../../build/i2c_sensors/i2c_sensors.egg-info to /home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages/i2c_sensors-0.0.0-py3.11.egg-info
+[22.214s] running install_scripts
+[24.217s] Installing imu_mpu6050_node script to /home/pi/ros2_ws/install/i2c_sensors/lib/i2c_sensors
+[24.219s] writing list of installed files to '/home/pi/ros2_ws/build/i2c_sensors/install.log'
+[24.522s] Invoked command in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/i2c_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/i2c_sensors build --build-base /home/pi/ros2_ws/build/i2c_sensors/build install --record /home/pi/ros2_ws/build/i2c_sensors/install.log --single-version-externally-managed install_data

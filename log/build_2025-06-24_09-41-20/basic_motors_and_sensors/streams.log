@@ -1,0 +1,43 @@
+[14.322s] Invoking command in '/home/pi/ros2_ws/build/basic_motors_and_sensors': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/basic_motors_and_sensors/build --no-deps symlink_data
+[16.241s] /usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[16.241s]   warnings.warn(msg)
+[18.818s] running develop
+[18.822s] /usr/local/lib/python3.11/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[18.822s] !!
+[18.823s] 
+[18.823s]         ********************************************************************************
+[18.823s]         Please avoid running ``setup.py`` and ``easy_install``.
+[18.824s]         Instead, use pypa/build, pypa/installer or other
+[18.824s]         standards-based tools.
+[18.824s] 
+[18.825s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[18.826s]         ********************************************************************************
+[18.826s] 
+[18.826s] !!
+[18.827s]   easy_install.initialize_options(self)
+[21.755s] running egg_info
+[21.760s] creating basic_motors_and_sensors.egg-info
+[22.130s] writing basic_motors_and_sensors.egg-info/PKG-INFO
+[22.130s] writing dependency_links to basic_motors_and_sensors.egg-info/dependency_links.txt
+[22.131s] writing entry points to basic_motors_and_sensors.egg-info/entry_points.txt
+[22.132s] writing requirements to basic_motors_and_sensors.egg-info/requires.txt
+[22.133s] writing top-level names to basic_motors_and_sensors.egg-info/top_level.txt
+[22.133s] writing manifest file 'basic_motors_and_sensors.egg-info/SOURCES.txt'
+[22.574s] reading manifest file 'basic_motors_and_sensors.egg-info/SOURCES.txt'
+[22.577s] writing manifest file 'basic_motors_and_sensors.egg-info/SOURCES.txt'
+[22.854s] running build_ext
+[22.855s] Creating /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages/basic-motors-and-sensors.egg-link (link to .)
+[22.861s] Installing encoders_node script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[22.863s] Installing motor_commander script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[22.864s] Installing motor_executor script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[22.865s] Installing sensors_node script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[22.867s] Installing sensors_processor script to /home/pi/ros2_ws/install/basic_motors_and_sensors/lib/basic_motors_and_sensors
+[22.868s] 
+[22.869s] Installed /home/pi/ros2_ws/build/basic_motors_and_sensors
+[22.870s] running symlink_data
+[22.870s] creating /home/pi/ros2_ws/install/basic_motors_and_sensors/share/ament_index
+[22.871s] creating /home/pi/ros2_ws/install/basic_motors_and_sensors/share/ament_index/resource_index
+[22.873s] creating /home/pi/ros2_ws/install/basic_motors_and_sensors/share/ament_index/resource_index/packages
+[22.875s] symbolically linking /home/pi/ros2_ws/build/basic_motors_and_sensors/resource/basic_motors_and_sensors -> /home/pi/ros2_ws/install/basic_motors_and_sensors/share/ament_index/resource_index/packages
+[22.877s] symbolically linking /home/pi/ros2_ws/build/basic_motors_and_sensors/package.xml -> /home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors
+[23.202s] Invoked command in '/home/pi/ros2_ws/build/basic_motors_and_sensors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/basic_motors_and_sensors/build --no-deps symlink_data

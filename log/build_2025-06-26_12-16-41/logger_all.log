@@ -1,0 +1,267 @@
+[1.304s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.305s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fa6282710>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fa6281390>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fa6281390>>, mixin_verb=('build',))
+[1.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.612s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.612s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.612s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/ros2_ws'
+[1.612s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.613s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.614s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.748s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['ignore', 'ignore_ament_install']
+[1.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'ignore'
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'ignore_ament_install'
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['colcon_pkg']
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'colcon_pkg'
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['colcon_meta']
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'colcon_meta'
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['ros']
+[1.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'ros'
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['cmake', 'python']
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'cmake'
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'python'
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extensions ['python_setup_py']
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C) by extension 'python_setup_py'
+[1.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extensions ['ignore', 'ignore_ament_install']
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extension 'ignore'
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extension 'ignore_ament_install'
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extensions ['colcon_pkg']
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extension 'colcon_pkg'
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extensions ['colcon_meta']
+[1.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extension 'colcon_meta'
+[1.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extensions ['ros']
+[1.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors) by extension 'ros'
+[1.764s] DEBUG:colcon.colcon_core.package_identification:Package 'src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors' with type 'ros.ament_python' and name 'basic_motors_and_sensors'
+[1.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['ignore', 'ignore_ament_install']
+[1.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'ignore'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'ignore_ament_install'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['colcon_pkg']
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'colcon_pkg'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['colcon_meta']
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'colcon_meta'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['ros']
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'ros'
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['cmake', 'python']
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'cmake'
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'python'
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extensions ['python_setup_py']
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2) by extension 'python_setup_py'
+[1.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extensions ['ignore', 'ignore_ament_install']
+[1.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extension 'ignore'
+[1.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extension 'ignore_ament_install'
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extensions ['colcon_pkg']
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extension 'colcon_pkg'
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extensions ['colcon_meta']
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extension 'colcon_meta'
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extensions ['ros']
+[1.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/i2c_sensors_ros2/i2c_sensors) by extension 'ros'
+[1.825s] DEBUG:colcon.colcon_core.package_identification:Package 'src/i2c_sensors_ros2/i2c_sensors' with type 'ros.ament_python' and name 'i2c_sensors'
+[1.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.826s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.827s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.828s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.828s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.828s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extensions ['ignore', 'ignore_ament_install']
+[1.828s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extension 'ignore'
+[1.828s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extension 'ignore_ament_install'
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extensions ['colcon_pkg']
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extension 'colcon_pkg'
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extensions ['colcon_meta']
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extension 'colcon_meta'
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extensions ['ros']
+[1.829s] Level 1:colcon.colcon_core.package_identification:_identify(src/simple_motors) by extension 'ros'
+[1.832s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simple_motors' with type 'ros.ament_python' and name 'simple_motors'
+[1.832s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.832s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.833s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.833s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.833s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.016s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.017s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.074s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/pi/ros2_ws/install
+[2.076s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/pi/ros2_ws/src/install
+[2.114s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 363 installed packages in /home/pi/ros2_jazzy/install
+[2.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_args' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_target' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[3.070s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[3.071s] Level 5:colcon.colcon_core.verb:set package 'basic_motors_and_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.071s] DEBUG:colcon.colcon_core.verb:Building package 'basic_motors_and_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/ros2_ws/build/basic_motors_and_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/ros2_ws/install/basic_motors_and_sensors', 'merge_install': False, 'path': '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors', 'symlink_install': False, 'test_result_base': None}
+[3.072s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_args' from command line to 'None'
+[3.072s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_target' from command line to 'None'
+[3.072s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.072s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[3.073s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[3.073s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[3.073s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[3.073s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[3.073s] Level 5:colcon.colcon_core.verb:set package 'i2c_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.073s] DEBUG:colcon.colcon_core.verb:Building package 'i2c_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/ros2_ws/build/i2c_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/ros2_ws/install/i2c_sensors', 'merge_install': False, 'path': '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors', 'symlink_install': False, 'test_result_base': None}
+[3.074s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_args' from command line to 'None'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_target' from command line to 'None'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_clean_cache' from command line to 'False'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_clean_first' from command line to 'False'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'cmake_force_configure' from command line to 'False'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'ament_cmake_args' from command line to 'None'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'catkin_cmake_args' from command line to 'None'
+[3.075s] Level 5:colcon.colcon_core.verb:set package 'simple_motors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.075s] DEBUG:colcon.colcon_core.verb:Building package 'simple_motors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/ros2_ws/build/simple_motors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/ros2_ws/install/simple_motors', 'merge_install': False, 'path': '/home/pi/ros2_ws/src/simple_motors', 'symlink_install': False, 'test_result_base': None}
+[3.076s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.080s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors' with build type 'ament_python'
+[3.081s] Level 1:colcon.colcon_core.shell:create_environment_hook('basic_motors_and_sensors', 'ament_prefix_path')
+[3.114s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/ament_prefix_path.ps1'
+[3.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/ament_prefix_path.dsv'
+[3.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/ament_prefix_path.sh'
+[3.128s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.129s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.229s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors' with build type 'ament_python'
+[3.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('i2c_sensors', 'ament_prefix_path')
+[3.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/ament_prefix_path.ps1'
+[3.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/ament_prefix_path.dsv'
+[3.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/ament_prefix_path.sh'
+[3.237s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.237s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.336s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/ros2_ws/src/simple_motors' with build type 'ament_python'
+[3.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_motors', 'ament_prefix_path')
+[3.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/ament_prefix_path.ps1'
+[3.339s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/ament_prefix_path.dsv'
+[3.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/ament_prefix_path.sh'
+[3.344s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.344s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.905s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors'
+[5.906s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.906s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.435s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors'
+[8.436s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.436s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.004s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/ros2_ws/src/simple_motors'
+[11.005s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.005s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[20.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/src/simple_motors': PYTHONPATH=/home/pi/ros2_ws/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/simple_motors build --build-base /home/pi/ros2_ws/build/simple_motors/build install --record /home/pi/ros2_ws/build/simple_motors/install.log --single-version-externally-managed install_data
+[20.532s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors': PYTHONPATH=/home/pi/ros2_ws/build/i2c_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/i2c_sensors build --build-base /home/pi/ros2_ws/build/i2c_sensors/build install --record /home/pi/ros2_ws/build/i2c_sensors/install.log --single-version-externally-managed install_data
+[20.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/basic_motors_and_sensors build --build-base /home/pi/ros2_ws/build/basic_motors_and_sensors/build install --record /home/pi/ros2_ws/build/basic_motors_and_sensors/install.log --single-version-externally-managed install_data
+[28.094s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/src/simple_motors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/simple_motors build --build-base /home/pi/ros2_ws/build/simple_motors/build install --record /home/pi/ros2_ws/build/simple_motors/install.log --single-version-externally-managed install_data
+[28.150s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors' for CMake module files
+[28.153s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors' for CMake config files
+[28.156s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors/lib'
+[28.157s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors/bin'
+[28.157s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors/lib/pkgconfig/simple_motors.pc'
+[28.159s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors/lib/python3.11/site-packages'
+[28.159s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_motors', 'pythonpath')
+[28.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/pythonpath.ps1'
+[28.163s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/pythonpath.dsv'
+[28.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/hook/pythonpath.sh'
+[28.171s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/simple_motors/bin'
+[28.171s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simple_motors)
+[28.173s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/package.ps1'
+[28.179s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/package.dsv'
+[28.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/package.sh'
+[28.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/package.bash'
+[28.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/simple_motors/share/simple_motors/package.zsh'
+[28.201s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/ros2_ws/install/simple_motors/share/colcon-core/packages/simple_motors)
+[28.209s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors' for CMake module files
+[28.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/src/i2c_sensors_ros2/i2c_sensors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/i2c_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/i2c_sensors build --build-base /home/pi/ros2_ws/build/i2c_sensors/build install --record /home/pi/ros2_ws/build/i2c_sensors/install.log --single-version-externally-managed install_data
+[28.215s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors' for CMake config files
+[28.218s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors/lib'
+[28.218s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors/bin'
+[28.219s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors/lib/pkgconfig/i2c_sensors.pc'
+[28.221s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors/lib/python3.11/site-packages'
+[28.225s] Level 1:colcon.colcon_core.shell:create_environment_hook('i2c_sensors', 'pythonpath')
+[28.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/pythonpath.ps1'
+[28.233s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/pythonpath.dsv'
+[28.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/hook/pythonpath.sh'
+[28.241s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/i2c_sensors/bin'
+[28.241s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(i2c_sensors)
+[28.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/package.ps1'
+[28.247s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/package.dsv'
+[28.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/package.sh'
+[28.255s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/package.bash'
+[28.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/i2c_sensors/share/i2c_sensors/package.zsh'
+[28.262s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/ros2_ws/install/i2c_sensors/share/colcon-core/packages/i2c_sensors)
+[28.276s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors' for CMake module files
+[28.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/src/basic_motors_and_sensors_ros2_v01C/basic_motors_and_sensors' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/basic_motors_and_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../build/basic_motors_and_sensors build --build-base /home/pi/ros2_ws/build/basic_motors_and_sensors/build install --record /home/pi/ros2_ws/build/basic_motors_and_sensors/install.log --single-version-externally-managed install_data
+[28.280s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors' for CMake config files
+[28.281s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors/lib'
+[28.282s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors/bin'
+[28.282s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/pkgconfig/basic_motors_and_sensors.pc'
+[28.283s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors/lib/python3.11/site-packages'
+[28.283s] Level 1:colcon.colcon_core.shell:create_environment_hook('basic_motors_and_sensors', 'pythonpath')
+[28.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/pythonpath.ps1'
+[28.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/pythonpath.dsv'
+[28.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/hook/pythonpath.sh'
+[28.289s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/basic_motors_and_sensors/bin'
+[28.289s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(basic_motors_and_sensors)
+[28.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/package.ps1'
+[28.293s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/package.dsv'
+[28.295s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/package.sh'
+[28.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/package.bash'
+[28.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/basic_motors_and_sensors/share/basic_motors_and_sensors/package.zsh'
+[28.302s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/ros2_ws/install/basic_motors_and_sensors/share/colcon-core/packages/basic_motors_and_sensors)
+[28.304s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[28.305s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[28.306s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[28.306s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[28.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[28.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[28.380s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[28.380s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[28.383s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[28.384s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[28.385s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.ps1'
+[28.388s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/ros2_ws/install/_local_setup_util_ps1.py'
+[28.394s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.ps1'
+[28.443s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.sh'
+[28.446s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/ros2_ws/install/_local_setup_util_sh.py'
+[28.448s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.sh'
+[28.498s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.bash'
+[28.501s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.bash'
+[28.550s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.zsh'
+[28.553s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.zsh'

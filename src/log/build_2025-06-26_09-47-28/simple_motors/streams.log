@@ -1,0 +1,51 @@
+[17.689s] Invoking command in '/home/pi/ros2_ws/src/simple_motors': PYTHONPATH=/home/pi/ros2_ws/src/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/simple_motors build --build-base /home/pi/ros2_ws/src/build/simple_motors/build install --record /home/pi/ros2_ws/src/build/simple_motors/install.log --single-version-externally-managed install_data
+[19.904s] /usr/local/lib/python3.11/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[19.905s]   warnings.warn(msg)
+[21.726s] running egg_info
+[21.729s] creating ../build/simple_motors/simple_motors.egg-info
+[21.989s] writing ../build/simple_motors/simple_motors.egg-info/PKG-INFO
+[21.992s] writing dependency_links to ../build/simple_motors/simple_motors.egg-info/dependency_links.txt
+[21.996s] writing entry points to ../build/simple_motors/simple_motors.egg-info/entry_points.txt
+[21.997s] writing requirements to ../build/simple_motors/simple_motors.egg-info/requires.txt
+[21.998s] writing top-level names to ../build/simple_motors/simple_motors.egg-info/top_level.txt
+[21.999s] writing manifest file '../build/simple_motors/simple_motors.egg-info/SOURCES.txt'
+[22.549s] reading manifest file '../build/simple_motors/simple_motors.egg-info/SOURCES.txt'
+[22.553s] writing manifest file '../build/simple_motors/simple_motors.egg-info/SOURCES.txt'
+[22.554s] running build
+[22.555s] running build_py
+[22.556s] creating /home/pi/ros2_ws/src/build/simple_motors/build
+[22.557s] creating /home/pi/ros2_ws/src/build/simple_motors/build/lib
+[22.558s] creating /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.560s] copying simple_motors/motor_commander.py -> /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.561s] copying simple_motors/motors_commander.py -> /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.565s] copying simple_motors/motor_executor.py -> /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.566s] copying simple_motors/__init__.py -> /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.567s] copying simple_motors/motors_executor.py -> /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors
+[22.568s] running install
+[22.601s] running install_lib
+[22.869s] creating /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.869s] copying /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors/motor_commander.py -> /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.870s] copying /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors/motors_commander.py -> /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.871s] copying /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors/motor_executor.py -> /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.872s] copying /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors/__init__.py -> /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.873s] copying /home/pi/ros2_ws/src/build/simple_motors/build/lib/simple_motors/motors_executor.py -> /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors
+[22.887s] byte-compiling /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors/motor_commander.py to motor_commander.cpython-311.pyc
+[22.887s] byte-compiling /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors/motors_commander.py to motors_commander.cpython-311.pyc
+[22.889s] byte-compiling /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors/motor_executor.py to motor_executor.cpython-311.pyc
+[22.891s] byte-compiling /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors/__init__.py to __init__.cpython-311.pyc
+[22.893s] byte-compiling /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors/motors_executor.py to motors_executor.cpython-311.pyc
+[22.902s] running install_data
+[22.903s] creating /home/pi/ros2_ws/src/install/simple_motors/share/ament_index
+[22.905s] creating /home/pi/ros2_ws/src/install/simple_motors/share/ament_index/resource_index
+[22.907s] creating /home/pi/ros2_ws/src/install/simple_motors/share/ament_index/resource_index/packages
+[22.907s] copying resource/simple_motors -> /home/pi/ros2_ws/src/install/simple_motors/share/ament_index/resource_index/packages
+[22.908s] copying package.xml -> /home/pi/ros2_ws/src/install/simple_motors/share/simple_motors
+[22.917s] running install_egg_info
+[23.202s] Copying ../build/simple_motors/simple_motors.egg-info to /home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages/simple_motors-0.0.0-py3.11.egg-info
+[23.204s] running install_scripts
+[25.237s] Installing motor_commander_left script to /home/pi/ros2_ws/src/install/simple_motors/lib/simple_motors
+[25.248s] Installing motor_commander_right script to /home/pi/ros2_ws/src/install/simple_motors/lib/simple_motors
+[25.249s] Installing motor_executor_left script to /home/pi/ros2_ws/src/install/simple_motors/lib/simple_motors
+[25.250s] Installing motor_executor_right script to /home/pi/ros2_ws/src/install/simple_motors/lib/simple_motors
+[25.251s] writing list of installed files to '/home/pi/ros2_ws/src/build/simple_motors/install.log'
+[25.589s] Invoked command in '/home/pi/ros2_ws/src/simple_motors' returned '0': PYTHONPATH=/home/pi/ros2_ws/src/build/simple_motors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/src/install/simple_motors/lib/python3.11/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/simple_motors build --build-base /home/pi/ros2_ws/src/build/simple_motors/build install --record /home/pi/ros2_ws/src/build/simple_motors/install.log --single-version-externally-managed install_data

@@ -1,0 +1,63 @@
+[0.000000] (-) TimerEvent: {}
+[0.000923] (basic_motors_and_sensors) JobQueued: {'identifier': 'basic_motors_and_sensors', 'dependencies': OrderedDict()}
+[0.001169] (i2c_sensors) JobQueued: {'identifier': 'i2c_sensors', 'dependencies': OrderedDict()}
+[0.001261] (simple_motors) JobQueued: {'identifier': 'simple_motors', 'dependencies': OrderedDict()}
+[0.002005] (basic_motors_and_sensors) JobStarted: {'identifier': 'basic_motors_and_sensors'}
+[0.099214] (-) TimerEvent: {}
+[0.132037] (i2c_sensors) JobStarted: {'identifier': 'i2c_sensors'}
+[0.199402] (-) TimerEvent: {}
+[0.240859] (simple_motors) JobStarted: {'identifier': 'simple_motors'}
+[0.299557] (-) TimerEvent: {}
+[0.400258] (-) TimerEvent: {}
+[0.500877] (-) TimerEvent: {}
+[0.601478] (-) TimerEvent: {}
+[0.702081] (-) TimerEvent: {}
+[0.802715] (-) TimerEvent: {}
+[0.903340] (-) TimerEvent: {}
+[1.003941] (-) TimerEvent: {}
+[1.104723] (-) TimerEvent: {}
+[1.205340] (-) TimerEvent: {}
+[1.305936] (-) TimerEvent: {}
+[1.406540] (-) TimerEvent: {}
+[1.507171] (-) TimerEvent: {}
+[1.607811] (-) TimerEvent: {}
+[1.708476] (-) TimerEvent: {}
+[1.809056] (-) TimerEvent: {}
+[1.909702] (-) TimerEvent: {}
+[2.010283] (-) TimerEvent: {}
+[2.110822] (-) TimerEvent: {}
+[2.211371] (-) TimerEvent: {}
+[2.311946] (-) TimerEvent: {}
+[2.412592] (-) TimerEvent: {}
+[2.513385] (-) TimerEvent: {}
+[2.614045] (-) TimerEvent: {}
+[2.700308] (basic_motors_and_sensors) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 51, in build\n    setup_py_data = get_setup_data(self.context.pkg, env)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 20, in get_setup_data\n    return dict(pkg.metadata[key](env))\n                ^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_ros/package_augmentation/ros_ament_python.py", line 57, in getter\n    return get_setup_information(\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 241, in get_setup_information\n    _setup_information_cache[hashable_env] = _get_setup_information(\n                                             ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/lib/python3/dist-packages/colcon_python_setup_py/package_identification/python_setup_py.py", line 288, in _get_setup_information\n    result = subprocess.run(\n             ^^^^^^^^^^^^^^^\n  File "/usr/lib/python3.11/subprocess.py", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command \'[\'/usr/bin/python3\', \'-c\', \'import sys;from contextlib import suppress;exec("with suppress(ImportError):    from setuptools.extern.packaging.specifiers    import SpecifierSet");exec("with suppress(ImportError):    from packaging.specifiers import SpecifierSet");from distutils.core import run_setup;dist = run_setup(    \\\'setup.py\\\', script_args=(\\\'--dry-run\\\',), stop_after=\\\'config\\\');skip_keys = (\\\'cmdclass\\\', \\\'distclass\\\', \\\'ext_modules\\\', \\\'metadata\\\');data = {    key: value for key, value in dist.__dict__.items()     if (        not key.startswith(\\\'_\\\') and         not callable(value) and         key not in skip_keys and         key not in dist.display_option_names    )};data[\\\'metadata\\\'] = {    k: v for k, v in dist.metadata.__dict__.items()     if k not in (\\\'license_files\\\', \\\'provides_extras\\\')};sys.stdout.buffer.write(repr(data).encode(\\\'utf-8\\\'))\']\' returned non-zero exit status 1.\n'}
+[2.703177] (basic_motors_and_sensors) JobEnded: {'identifier': 'basic_motors_and_sensors', 'rc': 1}
+[2.714259] (-) TimerEvent: {}
+[2.814936] (-) TimerEvent: {}
+[2.915533] (-) TimerEvent: {}
+[3.016391] (-) TimerEvent: {}
+[3.117240] (-) TimerEvent: {}
+[3.218173] (-) TimerEvent: {}
+[3.319038] (-) TimerEvent: {}
+[3.419884] (-) TimerEvent: {}
+[3.520518] (-) TimerEvent: {}
+[3.621347] (-) TimerEvent: {}
+[3.722187] (-) TimerEvent: {}
+[3.823031] (-) TimerEvent: {}
+[3.923906] (-) TimerEvent: {}
+[4.024873] (-) TimerEvent: {}
+[4.126067] (-) TimerEvent: {}
+[4.226694] (-) TimerEvent: {}
+[4.327559] (-) TimerEvent: {}
+[4.428433] (-) TimerEvent: {}
+[4.529243] (-) TimerEvent: {}
+[4.629814] (-) TimerEvent: {}
+[4.730378] (-) TimerEvent: {}
+[4.831205] (-) TimerEvent: {}
+[4.932049] (-) TimerEvent: {}
+[5.032988] (-) TimerEvent: {}
+[5.134528] (-) TimerEvent: {}
+[5.220695] (i2c_sensors) JobEnded: {'identifier': 'i2c_sensors', 'rc': 'SIGINT'}
+[5.221925] (simple_motors) JobEnded: {'identifier': 'simple_motors', 'rc': 'SIGINT'}
+[5.231752] (-) EventReactorShutdown: {}

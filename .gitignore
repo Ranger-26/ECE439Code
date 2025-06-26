@@ -1,0 +1,10 @@
+build
+bin
+msg_gen
+srv_gen
+cpp
+
+*.cfgc
+*.pyc
+ROS_NOBUILD
+.swp
