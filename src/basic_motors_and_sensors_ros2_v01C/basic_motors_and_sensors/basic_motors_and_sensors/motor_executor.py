@@ -20,19 +20,19 @@ class MotorExecutor(Node):
         super().__init__('motor_executor')
         self.motor_left = PhaseEnableMotor(5,12)
         self.motor_right = PhaseEnableMotor(6,13)
-
-        self.subscription = self.create_subscription(Motors_combined_message,'motor_command',self.set_motor_commands,1)
+        self.subscription_left = self.create_subscription(Float32, 'motor_command_left', self.set_motor_command_left, 1)        
+        self.subscription_right = self.create_subscription(Float32,'motor_command_right', self.set_motor_command_right, 1)
     
     def set_motor_command_left(self, msg_in):
-        motor_command_left = float(msg_in.left)
-        self.get_logger().info('Received: %+5.3f' % msg_in.left)
+        motor_command_left = float(msg_in.data)
+        self.get_logger().info('Received: %+5.3f' % msg_in.data)
         if motor_command_left >= 0:
             self.motor_left.forward(motor_command_left)
         else:
             self.motor_left.backward(-1*motor_command_left)
    
     def set_motor_command_right(self, msg_in):
-        motor_command_right = float(msg_in.right)
+        motor_command_right = float(msg_in.data)
         if motor_command_right >= 0:
     	    self.motor_right.forward(motor_command_right)
         else:
