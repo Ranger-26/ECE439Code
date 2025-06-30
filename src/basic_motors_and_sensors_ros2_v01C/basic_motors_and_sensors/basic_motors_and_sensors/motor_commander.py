@@ -18,18 +18,16 @@ class MotorCommander(Node):
     
     def __init__(self):
         super().__init__('motor_commander')
-        self.publisher_ = self.create_publisher(Motors_combined_message, 'motor_command_left', 1)
+        self.publisher_ = self.create_publisher(Float32, 'motor_command_left', 1)
         
     def operate(self):
-        msg_out = Motors_combined_message()
+        msg_out = Float32()
         try:
             while True:
-                left_cmd = float(input('Enter left motor command:  ').strip())
-                right_cmd = float(input('Enter right motor command:  ').strip())
-                msg_out.left = left_cmd
-                msg_out.right = right_cmd
+                cmd = float(input('Enter left motor command:  ').strip())
+                msg_out.data = cmd
                 self.publisher_.publish(msg_out)
-                self.get_logger().info('Publishing: Left: %+5.3f, Right: %+5.3f' % msg_out.left, msg_out.right)
+                self.get_logger().info('Publishing: %+5.3f' % msg_out.data)
         except:
             traceback.print_exc()
         
