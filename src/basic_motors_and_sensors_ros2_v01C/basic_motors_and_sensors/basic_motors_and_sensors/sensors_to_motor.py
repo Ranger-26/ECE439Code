@@ -33,18 +33,17 @@ class SensorsToMotor(Node):
         # Callback function, which will be called with incoming message data when messages are received by the Subscriber above. 
     def cal_and_pub_A0(self, msg_in): 
         # Unpack the message. 
-        distance_in = msg_in.data
+        distance = msg_in.data
         msg_left = Float32()
         msg_right = Float32()
 
-	distance = distance_in / 2.0 * 0.0254 #convert to meters
-        if distance < 0.1:
+        if distance < 20:
             msg_left.data = -0.5
             msg_right.data = -0.5
         # Publish the newly packed Message
         else:
-            msg_left.data = 0.3
-            msg_right.data = 0.3
+            msg_left.data = 0.0
+            msg_right.data = 0.0
         
         self.publisher_motor_left.publish(msg_left)
         self.publisher_motor_right.publish(msg_right)
