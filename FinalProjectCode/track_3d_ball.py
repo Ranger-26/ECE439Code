@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import pickle
 from ik_test import send_angles
+from kalman_filter import KalmanFilter3DProjectile, predict_to_height
+
 K = None 
 dist = None
 # --- Load calibration parameters ---
@@ -16,6 +18,11 @@ baseline = 0.305  # meters
 # Globals
 hsv_frame_left = None
 hsv_frame_right = None
+
+
+#prediction
+positions = []
+
 
 def on_mouse(event, x, y, flags, param):
     global hsv_frame_left, hsv_frame_right
@@ -72,6 +79,8 @@ def main():
     cap_left.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
     cap_right.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap_right.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
+    cap_right.set(cv2.CAP_PROP_FPS, 60)
+    cap_left.set(cv2.CAP_PROP_FPS, 60)
 
     if not cap_left.isOpened() or not cap_right.isOpened():
         print("Error: Could not open cameras.")
@@ -88,11 +97,14 @@ def main():
         # (np.array([37, 100, 100]), np.array([43, 255, 255]))
         # (np.array([0, 100, 100]), np.array([2, 255, 255])),
         # (np.array([175, 100, 100]), np.array([180, 255, 255])),
-        (np.array([101, 100, 100]), np.array([114, 255, 255])),
+        (np.array([101, 100, 100]), np.array([114, 255, 255]))
     ]
 
     import time
     last_sent_time = 0
+    update_window_active = False
+    update_window_start = 0
+    update_window_duration = 0.5  # seconds
     while True:
         retL, frameL = cap_left.read()
         retR, frameR = cap_right.read()
@@ -114,20 +126,19 @@ def main():
         if uR is not None:
             cv2.circle(frameR, (uR, vR), rR, (0, 255, 0), 2)
 
-        current_time = time.time()
+        # Robot follows the ball's current position
         if uL is not None and uR is not None:
             coords = estimate_depth(uL, uR, vL)
             if coords is not None:
                 X, Y, Z = coords
                 if X is not None and Y is not None and Z is not None:
+                    xArm = X - baseline / 2
                     yArm = Z - 0.736
-                    xArm = X + baseline / 2
-                    text = f"3D Pos: X={X:.2f}m Y={Y:.2f}m Z={Z:.2f}m"
-                    cv2.putText(frameL, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
-                    print(text)
-                    if True:
-                        send_angles(xArm - 0.1, yArm, 0, 0.31, 0.31)  # Send angles to robot arm
-                        last_sent_time = current_time
+                    send_angles(xArm, yArm, 0, 0.31, 0.31)
+                    print(f"[Follow Ball] Arm Position: X={xArm:.2f}, Y={yArm:.2f}")
+                    # Display xArm and yArm on frame
+                    arm_text = f"Arm: X={xArm:.2f} Y={yArm:.2f}"
+                    cv2.putText(frameL, arm_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 255), 2)
 
         cv2.imshow('Left', frameL)
         cv2.imshow('Right', frameR)
@@ -141,6 +152,7 @@ def main():
     cap_left.release()
     cap_right.release()
     cv2.destroyAllWindows()
+
 
 if __name__ == "__main__":
     main()
