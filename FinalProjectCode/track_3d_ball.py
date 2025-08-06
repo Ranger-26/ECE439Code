@@ -1,92 +1,141 @@
 import cv2
 import numpy as np
+import pickle
+from ik_test import send_angles
+K = None 
+dist = None
+# --- Load calibration parameters ---
+K = pickle.load(open("cam_matrix.p","rb"),encoding='bytes')
+dist = pickle.load(open("dist_matrix.p","rb"),encoding='bytes')
 
-# ==== Load Calibration ====
-left_data = np.load("single_camera_calibration/camera_calibration_data_left.npz")
-right_data = np.load("single_camera_calibration/camera_calibration_data_right.npz")
+print(K)
+print(dist)
 
-mtxL, distL = left_data["mtx"], left_data["dist"]
-mtxR, distR = right_data["mtx"], right_data["dist"]
+baseline = 0.305  # meters
 
-# ==== Manual Extrinsics ====
-# Right camera is `baseline` meters to the right of the left
-baseline = 0.285  # meters — change to your measured distance
-R = np.eye(3)
-T = np.array([[baseline], [0], [0]])
+# Globals
+hsv_frame_left = None
+hsv_frame_right = None
 
-P1 = mtxL @ np.hstack((np.eye(3), np.zeros((3,1))))
-P2 = mtxR @ np.hstack((R, T))
+def on_mouse(event, x, y, flags, param):
+    global hsv_frame_left, hsv_frame_right
+    if event == cv2.EVENT_LBUTTONDOWN:
+        win_name = param
+        if win_name == "Left":
+            frame = hsv_frame_left
+        else:
+            frame = hsv_frame_right
+        if frame is not None and y < frame.shape[0] and x < frame.shape[1]:
+            pixel_hsv = frame[y, x]
+            print(f"[{win_name} Camera] Clicked HSV: H={pixel_hsv[0]}, S={pixel_hsv[1]}, V={pixel_hsv[2]}")
 
-# ==== Ball Detection Params ====
-# Adjust these to your ball's color in HSV
-lower_hsv = np.array([101, 100, 100])
-upper_hsv = np.array([114, 255, 255])
+def find_red_ball_center(hsv_frame, red_ranges):
+    total_mask = np.zeros(hsv_frame.shape[:2], dtype=np.uint8)
 
-def detect_ball_center(frame, lower, upper):
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    mask = cv2.inRange(hsv, lower, upper)
-    mask = cv2.erode(mask, None, iterations=1)
-    mask = cv2.dilate(mask, None, iterations=2)
+    for lower, upper in red_ranges:
+        mask = cv2.inRange(hsv_frame, lower, upper)
+        total_mask = cv2.bitwise_or(total_mask, mask)
 
-    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+    total_mask = cv2.morphologyEx(total_mask, cv2.MORPH_OPEN, kernel)
+    total_mask = cv2.morphologyEx(total_mask, cv2.MORPH_CLOSE, kernel)
+
+    contours, _ = cv2.findContours(total_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if contours:
         largest = max(contours, key=cv2.contourArea)
-        if cv2.contourArea(largest) > 100:
-            M = cv2.moments(largest)
-            if M["m00"] != 0:
-                cx = int(M["m10"] / M["m00"])
-                cy = int(M["m01"] / M["m00"])
-                return (cx, cy)
-    return None
+        if cv2.contourArea(largest) > 200:
+            (x, y), radius = cv2.minEnclosingCircle(largest)
+            return int(x), int(y), int(radius), total_mask
+    return None, None, None, total_mask
 
-# ==== Setup Cameras ====
-capL = cv2.VideoCapture(1,cv2.CAP_DSHOW)
-capR = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+def estimate_depth(uL, uR, vL):
+    fx = K[0, 0]
+    cx = K[0, 2]
+    cy = K[1, 2]
 
-# Flip the right camera if it's physically upside down
-flip_right = True
+    disparity = abs(uL - uR)
+    if disparity == 0:
+        return None, None, None
 
-while True:
-    retL, frameL = capL.read()
-    retR, frameR = capR.read()
+    Z = fx * baseline / disparity
+    X = (uL - cx) * Z / fx
+    Y = (vL - cy) * Z / fx  # Using fx approx for fy
 
-    if not retL or not retR:
-        print("Failed to read from cameras.")
-        break
+    return X, Y, Z
 
-    if flip_right:
-        frameR = cv2.rotate(frameR, cv2.ROTATE_180)
 
-    # Undistort
-    undistL = cv2.undistort(frameL, mtxL, distL)
-    undistR = cv2.undistort(frameR, mtxR, distR)
+def main():
+    global hsv_frame_left, hsv_frame_right
+    cap_left = cv2.VideoCapture(2, cv2.CAP_DSHOW)
+    cap_right = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+    cap_left.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    cap_left.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
+    cap_right.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    cap_right.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
 
-    # Detect ball
-    ptL = detect_ball_center(undistL, lower_hsv, upper_hsv)
-    ptR = detect_ball_center(undistR, lower_hsv, upper_hsv)
+    if not cap_left.isOpened() or not cap_right.isOpened():
+        print("Error: Could not open cameras.")
+        return
 
-    # Triangulate if both points found
-    if ptL and ptR:
-        uL = np.array(ptL, dtype=np.float32).reshape(2, 1)
-        uR = np.array(ptR, dtype=np.float32).reshape(2, 1)
+    cv2.namedWindow('Left')
+    cv2.namedWindow('Right')
+    cv2.setMouseCallback('Left', on_mouse, param="Left")
+    cv2.setMouseCallback('Right', on_mouse, param="Right")
 
-        point4D = cv2.triangulatePoints(P1, P2, uL, uR)
-        point4D /= point4D[3]
+    # --- Red color ranges in HSV (both ends of the hue wheel)
+    color_ranges = [
+        (np.array([37, 100, 100]), np.array([43, 255, 255])),
+        (np.array([37, 100, 100]), np.array([43, 255, 255]))
+        # (np.array([0, 100, 100]), np.array([2, 255, 255])),
+        # (np.array([175, 100, 100]), np.array([180, 255, 255])),
+    ]
 
-        X, Y, Z = point4D[0, 0], point4D[1, 0], point4D[2, 0]
+    while True:
+        retL, frameL = cap_left.read()
+        retR, frameR = cap_right.read()
+        if not retL or not retR:
+            break
 
-        text = f"X={X:.2f}m Y={Y:.2f}m Z={Z:.2f}m"
-        cv2.putText(undistL, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
-        cv2.circle(undistL, ptL, 5, (0, 0, 255), -1)
-        cv2.circle(undistR, ptR, 5, (0, 0, 255), -1)
+        # Undistort frames
+        frameL = cv2.undistort(frameL, K, dist)
+        frameR = cv2.undistort(frameR, K, dist)
 
-    # Show
-    cv2.imshow("Left Camera", undistL)
-    cv2.imshow("Right Camera", undistR)
+        hsv_frame_left = cv2.cvtColor(frameL, cv2.COLOR_BGR2HSV)
+        hsv_frame_right = cv2.cvtColor(frameR, cv2.COLOR_BGR2HSV)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+        uL, vL, rL, maskL = find_red_ball_center(hsv_frame_left, color_ranges)
+        uR, vR, rR, maskR = find_red_ball_center(hsv_frame_right, color_ranges)
 
-capL.release()
-capR.release()
-cv2.destroyAllWindows()
+        if uL is not None:
+            cv2.circle(frameL, (uL, vL), rL, (0, 255, 0), 2)
+        if uR is not None:
+            cv2.circle(frameR, (uR, vR), rR, (0, 255, 0), 2)
+
+        if uL is not None and uR is not None:
+            coords = estimate_depth(uL, uR, vL)
+            if coords is not None:
+                X, Y, Z = coords
+                if X is not None and Y is not None and Z is not None:
+                    yArm = Z - 0.74
+                    xArm = X - 0.14
+                    text = f"3D Pos: X={X:.2f}m Y={Y:.2f}m Z={Z:.2f}m"
+                    cv2.putText(frameL, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                    print(text)
+                    send_angles(xArm - 0.1, yArm, Z, 0.31, 0.31)  # Send angles to robot arm
+                
+
+        cv2.imshow('Left', frameL)
+        cv2.imshow('Right', frameR)
+        cv2.imshow('Mask Left', maskL)
+        cv2.imshow('Mask Right', maskR)
+
+        key = cv2.waitKey(1)
+        if key == 27:  # ESC
+            break
+
+    cap_left.release()
+    cap_right.release()
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    main()

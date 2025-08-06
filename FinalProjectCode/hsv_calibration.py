@@ -6,8 +6,8 @@ clicked_hsv = None
 hsv_frame = None
 
 # Initial HSV filter range (set to detect red by default)
-lower_hsv = np.array([0, 100, 100])
-upper_hsv = np.array([10, 255, 255])
+lower_hsv = np.array([37, 100, 100])
+upper_hsv = np.array([43, 255, 255])
 
 def on_mouse(event, x, y, flags, param):
     global clicked_hsv, hsv_frame
