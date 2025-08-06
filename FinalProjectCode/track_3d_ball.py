@@ -84,12 +84,15 @@ def main():
 
     # --- Red color ranges in HSV (both ends of the hue wheel)
     color_ranges = [
-        (np.array([37, 100, 100]), np.array([43, 255, 255])),
-        (np.array([37, 100, 100]), np.array([43, 255, 255]))
+        # (np.array([37, 100, 100]), np.array([43, 255, 255])),
+        # (np.array([37, 100, 100]), np.array([43, 255, 255]))
         # (np.array([0, 100, 100]), np.array([2, 255, 255])),
         # (np.array([175, 100, 100]), np.array([180, 255, 255])),
+        (np.array([101, 100, 100]), np.array([114, 255, 255])),
     ]
 
+    import time
+    last_sent_time = 0
     while True:
         retL, frameL = cap_left.read()
         retR, frameR = cap_right.read()
@@ -111,18 +114,20 @@ def main():
         if uR is not None:
             cv2.circle(frameR, (uR, vR), rR, (0, 255, 0), 2)
 
+        current_time = time.time()
         if uL is not None and uR is not None:
             coords = estimate_depth(uL, uR, vL)
             if coords is not None:
                 X, Y, Z = coords
                 if X is not None and Y is not None and Z is not None:
-                    yArm = Z - 0.74
-                    xArm = X - 0.14
+                    yArm = Z - 0.736
+                    xArm = X + baseline / 2
                     text = f"3D Pos: X={X:.2f}m Y={Y:.2f}m Z={Z:.2f}m"
-                    cv2.putText(frameL, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                    cv2.putText(frameL, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
                     print(text)
-                    send_angles(xArm - 0.1, yArm, Z, 0.31, 0.31)  # Send angles to robot arm
-                
+                    if True:
+                        send_angles(xArm - 0.1, yArm, 0, 0.31, 0.31)  # Send angles to robot arm
+                        last_sent_time = current_time
 
         cv2.imshow('Left', frameL)
         cv2.imshow('Right', frameR)
