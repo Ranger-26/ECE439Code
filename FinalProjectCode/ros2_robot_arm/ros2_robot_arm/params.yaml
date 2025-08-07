@@ -1,0 +1,15 @@
+stereo_vision_position_detection:
+  ros__parameters:
+    baseline: 0.305
+    color_ranges:
+      - [101, 100, 100, 114, 255, 255]
+
+inverse_kinematics:
+  ros__parameters:
+    arm_length_1: 0.31
+    arm_length_2: 0.31
+
+servo_commands:
+  ros__parameters:
+    serial_port: 'COM4'
+    baud_rate: 9600
